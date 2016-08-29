@@ -1,0 +1,25 @@
+{
+  "name": "rps-angular",
+  "version": "1.0.0",
+  "description": "rock paper scissors game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd app && ../node_modules/http-server/bin/http-server",
+    "webdriver-manager": "./node_modules/protractor/bin/webdriver-manager",
+    "protractor": "./node_modules/protractor/bin/protractor"
+  },
+  "author": "harry wynn-williams",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "protractor": "^4.0.4"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-spec-reporter": "0.0.26"
+  }
+}
