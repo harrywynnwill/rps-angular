@@ -1,14 +1,34 @@
 
 .computer {
-
-  max-width:10px;
-  max-height:10px;
+  display: inline-block;
+  min-width:400px;
+  min-height:400px;
   font-family: fantasy;
   font-size: 30;
 }
+.interface{
+display: inline;
+font-family: rps;
 
+}
+.player {
+  display: inline-block;
+  min-width:400px;
+  min-height:400px;
+  font-family: fantasy;
+  font-size: 30;
+}
+.result {
+  display: inline-block;
+  font-family: rps;
+  font-size: 50px
+}
 img{
-  max-width:400px;
-  max-height:400px;
+  max-width:300px;
+  max-height:300px;
 
+}
+@font-face {
+    font-family: rps;
+    src: url(RockPaperScissors-Regular.otf);
 }

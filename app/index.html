@@ -13,18 +13,26 @@
   </head>
   <body ng-app="rpsApp">
     <div ng-controller="GameController as ctrl">
-      {{ ctrl.computer}}
+      <div class="interface">
+        <form ng-submit="ctrl.playGame(choice)">
+          <select class="choices" name="choices" ng-model="choice"
+          ng-options="choice as choice for choice in ctrl.CHOICES" value="choice">
+          {{ selectedChoice }}
+        </select>
+      </form>
+    </div>
+
       <div class="computer">
-
-
         <img ng-src="{{ ctrl.computer === 'paper' && 'public/paper.jpeg' || ctrl.computer === 'scissors' && 'public/scissors.jpeg'
         || ctrl.computer === 'rock' && 'public/rock.jpeg'   }}">
       </div>
-      {{ ctrl.play_game(choice)}}
-      <form ng-submit="ctrl.play_game(choice)">
-        <input type="text" name="choice" ng-model="choice" />
-        <input type="submit" value="Submit" />
-      </form>
+      <div class="result">
+        {{ ctrl.playGame(choice)}}
+      </div>
+      <div class="player">
+        <img ng-src="{{ ctrl.playerSelection(choice) === 'paper' && 'public/paper.jpeg' || ctrl.playerSelection(choice) === 'scissors' && 'public/scissors.jpeg'
+        || ctrl.playerSelection(choice) && 'public/rock.jpeg'  }}">
+      </div>
     </div>
   </body>
 </html>

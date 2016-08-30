@@ -1,0 +1,3 @@
+#Rock Paper Scissors
+
+RPS re-written in Angular, experiments with services and binding...

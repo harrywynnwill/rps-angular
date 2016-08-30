@@ -2,12 +2,19 @@ angular.module('rpsApp')
 .controller('GameController', function(ComputerService, RulesService){
   var self =  this
   self.computer = ComputerService.computerChooser;
-  self.play_game = play_game;
+  self.playGame = playGame;
+  self.playerSelection = playerSelection;
+  self.CHOICES = ["rock","paper","scissors"];
 
-  function play_game(choice){
-    console.log(choice)
-    console.log(self.computer)
-   return RulesService.win_determiner(choice, self.computer)
+
+  function playGame(choice){
+    playerSelection(choice);
+    console.log(self.playerChoice)
+   return RulesService.winDeterminer(choice, self.computer)
 
   }
+  function playerSelection(choice){
+   return  self.playerChoice = choice;
+  }
+
 });

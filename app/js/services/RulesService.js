@@ -1,10 +1,10 @@
 angular.module('rpsApp')
   .service('RulesService', function(){
     var self = this;
-    self.win_determiner = win_determiner;
+    self.winDeterminer = winDeterminer;
 
 
-    function win_determiner(player_choice, computer_choice){
+    function winDeterminer(player_choice, computer_choice){
       switch(player_choice)
       {
         case "rock":
@@ -21,10 +21,10 @@ angular.module('rpsApp')
 
     function _rock(choice) {
       if(choice === "scissors"){
-        return _player_wins();
+        return _playerWins();
       }
       else if (choice === "paper") {
-        return _computer_wins();
+        return _computerWins();
       }
       else{
         return _tie();
@@ -32,10 +32,10 @@ angular.module('rpsApp')
     }
     function _paper(choice) {
       if(choice === "rock"){
-        return _player_wins();
+        return _playerWins();
       }
       else if (choice === "scissors") {
-        return _computer_wins();
+        return _computerWins();
       }
       else{
         return _tie();
@@ -44,10 +44,10 @@ angular.module('rpsApp')
 
     function _scissors(choice) {
       if(choice === "paper"){
-        return _player_wins();
+        return _playerWins();
       }
       else if (choice === "rock") {
-        return _computer_wins();
+        return _computerWins();
       }
       else{
         return _tie();
@@ -55,11 +55,11 @@ angular.module('rpsApp')
     }
 
 
-    function _player_wins(){
+    function _playerWins(){
       return "player wins";
     }
 
-    function _computer_wins(){
+    function _computerWins(){
       return "computer wins";
     }
     function _tie(){
